@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.result {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  text-align: center;
+  font-weight: 500;
+}
+
+.loading {
+  margin: 2rem;
+}
+
+.error {
+  color: #ff6b6b;
+  margin-top: 1rem;
+  text-align: center;
+} 
