@@ -1,6 +1,6 @@
 # Currency Converter
 
-A modern, responsive currency converter web application that provides real-time exchange rates.
+A currency converter web application that provides daily exchange rates.
 
 ## Features
 
