@@ -9,7 +9,7 @@ export default function Header() {
       <h1 className={styles.title}>Currency Converter</h1>
       <div className={styles.actions}>
         <a 
-          href="https://github.com/sorou/currency-api" 
+          href="https://github.com/batistan/currency-api"
           target="_blank" 
           rel="noopener noreferrer"
           className={styles.link}
