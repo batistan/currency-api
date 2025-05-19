@@ -64,7 +64,6 @@ export async function fetchCurrencyData(): Promise<CurrencyResponse> {
   return response.json().then(data => {
     switch (data.result) {
       case "success":
-        console.log("got result!", data)
         return new CurrencySuccessResponse(data)
       case "error":
         return new CurrencyErrorResponse(data)

@@ -21,8 +21,6 @@ export default function Converter() {
     fetchCurrencyData().then(data => {
       if (data instanceof CurrencySuccessResponse) {
         rateData.current = data.latestRates
-        console.log(data.latestRates)
-        console.log(rateData.current)
       } else {
         setError(data.errorMessage)
       }

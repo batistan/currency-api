@@ -55,7 +55,7 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid var(--border-color);
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
@@ -73,6 +73,7 @@ button:focus-visible {
 }
 
 footer {
+  background-color: var(--bg-primary);
   border-top: 1px solid #aaaaaaaa;
 }
 
