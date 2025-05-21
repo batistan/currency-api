@@ -7,6 +7,7 @@ import styles from './Converter.module.css';
 
 export default function Converter() {
   const [base, setBase] = useState<string>("USD");
+  const [baseAmount, setBaseAmount] = useState<number>(1);
   const [target, setTarget] = useState<string>("EUR");
 
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -41,12 +42,16 @@ export default function Converter() {
       <CurrencySelector
         label={"Select base currency"}
         selected={base}
+        amount={baseAmount}
+        setAmount={setBaseAmount}
         handleSelect={(c: string) => setBase(c)}
         options={options}
       />
       <CurrencySelector
         label={"Select target currency"}
         selected={target}
+        amount={(targetVal ?? 1) * baseAmount}
+        setAmount={() => {}}
         handleSelect={(c: string) => setTarget(c)}
         options={options}
       />

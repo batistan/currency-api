@@ -4,12 +4,14 @@ import {useState} from "react";
 
 interface CurrencySelectorProps {
   readonly label: string
+  readonly amount: number
+  readonly setAmount: (amount: number) => void
   readonly selected: string
   readonly handleSelect: (c: string) => void,
   readonly options: Currency[]
 }
 
-export default function CurrencySelector({ label, selected, handleSelect, options = currencies }: CurrencySelectorProps) {
+export default function CurrencySelector({ label, amount, setAmount, selected, handleSelect, options = currencies }: CurrencySelectorProps) {
   const selectedOption = options.find(option => option.code === selected)
   const [searchTerm, setSearchTerm] = useState<string>(selectedOption ? `${selectedOption.code} - ${selectedOption.displayName}` : "")
   const [isDropdownVisible, setIsDropdownVisible] = useState<boolean>(false);
@@ -48,6 +50,11 @@ export default function CurrencySelector({ label, selected, handleSelect, option
               >{`${value.code} - ${value.displayName}`}</li>
           })}
         </ul>}
+      </div>
+      <div>
+        <label>
+          <input type="number" value={amount} onChange={e => setAmount(+e.target.value)} />
+        </label>
       </div>
     </div>
   );
